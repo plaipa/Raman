@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile(FaNum)_Bold.ttf">
+            <string>IRANSansMobileFaNum-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--ScanQR View Controller-->
+        <scene sceneID="R8x-YO-MtD">
+            <objects>
+                <viewController storyboardIdentifier="ScanQRViewController" wantsFullScreenLayout="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h2F-Qc-WfG" customClass="ScanQRViewController" customModule="Raman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WXP-cf-IpV">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oF-Ia-uU4" customClass="QRScannerView" customModule="MercariQRScanner">
+                                <rect key="frame" x="0.0" y="125" width="390" height="719"/>
+                                <color key="backgroundColor" name="Background"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GR-7B-j8c">
+                                <rect key="frame" x="26" y="67" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="DYk-PE-YbM"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="h2F-Qc-WfG" eventType="touchUpInside" id="Kay-O2-29l"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد را اسکن کنید" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="XbK-HQ-H3m">
+                                <rect key="frame" x="94" y="81" width="202" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobileFaNum" pointSize="16"/>
+                                <color key="textColor" name="Grey 4"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pla-Gq-zRU"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8GR-7B-j8c" firstAttribute="top" secondItem="Pla-Gq-zRU" secondAttribute="top" constant="20" id="0bh-rj-50c"/>
+                            <constraint firstItem="XbK-HQ-H3m" firstAttribute="leading" secondItem="8GR-7B-j8c" secondAttribute="trailing" constant="20" id="CSh-uW-xWR"/>
+                            <constraint firstItem="XbK-HQ-H3m" firstAttribute="centerX" secondItem="WXP-cf-IpV" secondAttribute="centerX" id="KBr-bp-2TP"/>
+                            <constraint firstItem="XbK-HQ-H3m" firstAttribute="centerY" secondItem="8GR-7B-j8c" secondAttribute="centerY" id="KcI-Xw-GAn"/>
+                            <constraint firstItem="8GR-7B-j8c" firstAttribute="width" secondItem="8GR-7B-j8c" secondAttribute="height" multiplier="1:1" id="QKF-Kj-k7y"/>
+                            <constraint firstItem="0oF-Ia-uU4" firstAttribute="top" secondItem="8GR-7B-j8c" secondAttribute="bottom" constant="10" id="T56-XW-EdL"/>
+                            <constraint firstItem="0oF-Ia-uU4" firstAttribute="leading" secondItem="WXP-cf-IpV" secondAttribute="leading" id="asL-Cf-nLv"/>
+                            <constraint firstAttribute="bottom" secondItem="0oF-Ia-uU4" secondAttribute="bottom" id="dnT-zo-8Mw"/>
+                            <constraint firstAttribute="trailing" secondItem="0oF-Ia-uU4" secondAttribute="trailing" id="kC5-fZ-nqD"/>
+                            <constraint firstItem="8GR-7B-j8c" firstAttribute="leading" secondItem="Pla-Gq-zRU" secondAttribute="leading" constant="26" id="u2l-OU-SxM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="k21-h1-DFg"/>
+                    <connections>
+                        <outlet property="cameraView" destination="0oF-Ia-uU4" id="4Es-GL-3US"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7S-6b-GEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.15384615384608" y="61.137440758293835"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back" width="256" height="256"/>
+        <namedColor name="Background">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grey 4">
+            <color red="0.74099999666213989" green="0.74099999666213989" blue="0.74099999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

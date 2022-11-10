@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile(FaNum)_Bold.ttf">
+            <string>IRANSansMobileFaNum-Bold</string>
+        </array>
+        <array key="IRANSansMobile(FaNum)_Medium.ttf">
+            <string>IRANSansMobileFaNum-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Raman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لطفا کد QR یا تگ NFC را اسکن کنید" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-t9-mC2">
+                                <rect key="frame" x="30" y="147" width="330" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobileFaNum" pointSize="16"/>
+                                <color key="textColor" name="Grey 4"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4170829" translatesAutoresizingMaskIntoConstraints="NO" id="8Nv-8s-yFG">
+                                <rect key="frame" x="60" y="207.33333333333337" width="270" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8Nv-8s-yFG" secondAttribute="height" multiplier="1:1" id="ERu-Nu-Cfj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5o-KG-ZOW">
+                                <rect key="frame" x="24" y="740" width="342" height="50"/>
+                                <color key="backgroundColor" name="Green 2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="y80-lF-PJv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobileFaNum" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="اسکن کد QR">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scanQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6bQ-q3-AdA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rw7-K9-zQr">
+                                <rect key="frame" x="24" y="676" width="342" height="50"/>
+                                <color key="backgroundColor" name="Green 2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Igd-88-ege"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobileFaNum" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="اسکن کارت NFC">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scanNFCButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U5Q-u1-hkJ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="512x512" translatesAutoresizingMaskIntoConstraints="NO" id="ErT-Dc-DFb">
+                                <rect key="frame" x="125" y="57" width="140" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Tey-nS-EUU"/>
+                                    <constraint firstAttribute="width" secondItem="ErT-Dc-DFb" secondAttribute="height" multiplier="10:5" id="ewX-OB-mBQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60A-6f-r2f">
+                                <rect key="frame" x="332" y="75" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Xh9-0Z-tBI"/>
+                                    <constraint firstAttribute="width" secondItem="60A-6f-r2f" secondAttribute="height" multiplier="1:1" id="iCG-Y1-mJh"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Group 1"/>
+                                <connections>
+                                    <action selector="historyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sb7-Hz-FjY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RW9-w5-2pf">
+                                <rect key="frame" x="24" y="75" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="jWQ-Zf-6br"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Group 2"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dsf-XF-WCm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O5o-KG-ZOW" secondAttribute="trailing" constant="24" id="2Lh-gX-VMu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Nv-8s-yFG" secondAttribute="trailing" constant="60" id="2s9-44-H3c"/>
+                            <constraint firstItem="6IB-t9-mC2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4cI-7g-K2s"/>
+                            <constraint firstItem="ErT-Dc-DFb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="6fe-6Y-uuI"/>
+                            <constraint firstItem="ErT-Dc-DFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8kM-KB-Jqq"/>
+                            <constraint firstAttribute="bottom" secondItem="O5o-KG-ZOW" secondAttribute="bottom" constant="54" id="9zw-n8-N9o"/>
+                            <constraint firstItem="60A-6f-r2f" firstAttribute="centerY" secondItem="ErT-Dc-DFb" secondAttribute="centerY" id="COg-ht-VpY"/>
+                            <constraint firstItem="8Nv-8s-yFG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E4T-bW-uWx"/>
+                            <constraint firstItem="RW9-w5-2pf" firstAttribute="centerY" secondItem="ErT-Dc-DFb" secondAttribute="centerY" id="Jb0-OB-u1W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="60A-6f-r2f" secondAttribute="trailing" constant="24" id="NO0-A1-t8u"/>
+                            <constraint firstItem="RW9-w5-2pf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="NpI-OL-4Fe"/>
+                            <constraint firstItem="8Nv-8s-yFG" firstAttribute="top" secondItem="6IB-t9-mC2" secondAttribute="bottom" constant="40" id="QD8-oO-2FH"/>
+                            <constraint firstItem="rw7-K9-zQr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="S1j-zH-D0C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6IB-t9-mC2" secondAttribute="trailing" constant="30" id="V2D-2V-FCh"/>
+                            <constraint firstItem="O5o-KG-ZOW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="YcR-rs-Yjn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rw7-K9-zQr" secondAttribute="trailing" constant="24" id="cvY-iU-3XP"/>
+                            <constraint firstItem="O5o-KG-ZOW" firstAttribute="top" secondItem="rw7-K9-zQr" secondAttribute="bottom" constant="14" id="j5T-Qs-8Cz"/>
+                            <constraint firstItem="6IB-t9-mC2" firstAttribute="top" secondItem="ErT-Dc-DFb" secondAttribute="bottom" constant="20" id="nDZ-vC-EzC"/>
+                            <constraint firstItem="RW9-w5-2pf" firstAttribute="width" secondItem="RW9-w5-2pf" secondAttribute="height" multiplier="1:1" id="zAC-fg-9mD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="9Ps-ph-DYH" kind="show" identifier="PopupViewController" id="iCR-aE-rlT"/>
+                        <segue destination="Kj7-XD-zX3" kind="show" identifier="ScanQRViewController" id="wG8-y4-Lhy"/>
+                        <segue destination="5Rw-o8-Hgg" kind="show" identifier="LoginViewController" id="bVm-KJ-ECk"/>
+                        <segue destination="QPl-13-YLt" kind="show" identifier="HistoryViewController" id="CCM-Wg-lIU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.923076923076923" y="-2.1327014218009479"/>
+        </scene>
+        <!--ScanQRViewController-->
+        <scene sceneID="res-6W-VV4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ScanQRCode" referencedIdentifier="ScanQRViewController" id="Kj7-XD-zX3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wW3-uW-WnK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1PW-RO-xLV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="432"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="Jpg-nO-3A6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Register" referencedIdentifier="LoginViewController" id="5Rw-o8-Hgg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lPS-Ze-jMB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2l-uX-XOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="487"/>
+        </scene>
+        <!--Popup View Controller-->
+        <scene sceneID="N1v-Ox-htH">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="9Ps-ph-DYH" customClass="PopupViewController" customModule="Raman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rbF-yF-CsP">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xms-Lq-EzG">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uaj-Dp-PGY">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10L-xT-dKx">
+                                <rect key="frame" x="30" y="257" width="330" height="330"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Incorrect" translatesAutoresizingMaskIntoConstraints="NO" id="Hue-MP-TWL">
+                                        <rect key="frame" x="132" y="20" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Hue-MP-TWL" secondAttribute="height" multiplier="1:1" id="hNS-gR-XNV"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عدم شناسایی کاربر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIq-dl-v98">
+                                        <rect key="frame" x="40" y="100" width="250" height="17.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobileFaNum" pointSize="14"/>
+                                        <color key="textColor" name="Grey 2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="کاربر غیر مجاز است" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YsT-OF-suy">
+                                        <rect key="frame" x="40" y="137.66666666666669" width="250" height="162.33333333333331"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="Grey 2"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobileFaNum" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YsT-OF-suy" firstAttribute="top" secondItem="vIq-dl-v98" secondAttribute="bottom" constant="20" id="1JO-Uz-a2q"/>
+                                    <constraint firstItem="vIq-dl-v98" firstAttribute="leading" secondItem="10L-xT-dKx" secondAttribute="leading" constant="40" id="2v5-HJ-CO0"/>
+                                    <constraint firstAttribute="trailing" secondItem="YsT-OF-suy" secondAttribute="trailing" constant="40" id="AEy-TF-Va8"/>
+                                    <constraint firstItem="Hue-MP-TWL" firstAttribute="width" secondItem="10L-xT-dKx" secondAttribute="width" multiplier="0.2" id="Oec-Pe-L64"/>
+                                    <constraint firstAttribute="width" secondItem="10L-xT-dKx" secondAttribute="height" multiplier="1:1" id="Qgh-XV-gvA"/>
+                                    <constraint firstAttribute="trailing" secondItem="vIq-dl-v98" secondAttribute="trailing" constant="40" id="RMJ-Ke-sRt"/>
+                                    <constraint firstItem="Hue-MP-TWL" firstAttribute="top" secondItem="10L-xT-dKx" secondAttribute="top" constant="20" id="VcY-nU-cml"/>
+                                    <constraint firstItem="vIq-dl-v98" firstAttribute="top" secondItem="Hue-MP-TWL" secondAttribute="bottom" constant="14" id="Y5l-Ij-FH6"/>
+                                    <constraint firstItem="YsT-OF-suy" firstAttribute="leading" secondItem="10L-xT-dKx" secondAttribute="leading" constant="40" id="iDD-1d-c5z"/>
+                                    <constraint firstItem="Hue-MP-TWL" firstAttribute="centerX" secondItem="10L-xT-dKx" secondAttribute="centerX" id="sGP-En-xMe"/>
+                                    <constraint firstAttribute="bottom" secondItem="YsT-OF-suy" secondAttribute="bottom" constant="30" id="tJ2-yE-tdF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoY-91-IL0">
+                                <rect key="frame" x="24" y="740" width="342" height="50"/>
+                                <color key="backgroundColor" name="Green 2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tkA-OA-oOy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobileFaNum" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="تایید">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="okButton:" destination="9Ps-ph-DYH" eventType="touchUpInside" id="kea-M4-oZE"/>
+                                    <action selector="scanNFCButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZFw-2v-vBq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yol-d6-Fyj"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="10L-xT-dKx" firstAttribute="centerY" secondItem="rbF-yF-CsP" secondAttribute="centerY" id="1yW-yX-cCI"/>
+                            <constraint firstAttribute="trailing" secondItem="xms-Lq-EzG" secondAttribute="trailing" id="5cV-b3-qPm"/>
+                            <constraint firstItem="Yol-d6-Fyj" firstAttribute="trailing" secondItem="10L-xT-dKx" secondAttribute="trailing" constant="30" id="HNm-u2-uaa"/>
+                            <constraint firstAttribute="bottom" secondItem="xms-Lq-EzG" secondAttribute="bottom" id="Jxy-Yo-5Hi"/>
+                            <constraint firstItem="hoY-91-IL0" firstAttribute="leading" secondItem="Yol-d6-Fyj" secondAttribute="leading" constant="24" id="Mxg-SA-JPr"/>
+                            <constraint firstItem="10L-xT-dKx" firstAttribute="leading" secondItem="Yol-d6-Fyj" secondAttribute="leading" constant="30" id="R5Q-K7-eMG"/>
+                            <constraint firstAttribute="bottom" secondItem="hoY-91-IL0" secondAttribute="bottom" constant="54" id="ZBs-xg-jLo"/>
+                            <constraint firstItem="xms-Lq-EzG" firstAttribute="top" secondItem="rbF-yF-CsP" secondAttribute="top" id="fOt-3K-cQx"/>
+                            <constraint firstItem="Yol-d6-Fyj" firstAttribute="trailing" secondItem="hoY-91-IL0" secondAttribute="trailing" constant="24" id="ka9-vW-BAR"/>
+                            <constraint firstItem="xms-Lq-EzG" firstAttribute="leading" secondItem="rbF-yF-CsP" secondAttribute="leading" id="xvK-d8-KBK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X4i-qi-4a4"/>
+                    <connections>
+                        <outlet property="alertIconImageView" destination="Hue-MP-TWL" id="gqk-vc-8Vo"/>
+                        <outlet property="alertLabel" destination="vIq-dl-v98" id="Bg1-ud-sYZ"/>
+                        <outlet property="detailTextView" destination="YsT-OF-suy" id="7Pu-Rd-K9X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IfU-4N-Zud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.61538461538464" y="-2.1327014218009479"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="MSe-zJ-hzg">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="QPl-13-YLt" customClass="HistoryViewController" customModule="Raman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YCx-4V-JvC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W9B-jj-NBN">
+                                <rect key="frame" x="0.0" y="135" width="390" height="709"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QPl-13-YLt" id="B9a-hd-ewo"/>
+                                    <outlet property="delegate" destination="QPl-13-YLt" id="a9v-oB-g8s"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWc-os-7Oj">
+                                <rect key="frame" x="24" y="67" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="inR-fm-QXR"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="QPl-13-YLt" eventType="touchUpInside" id="JHQ-Rz-13a"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاریخچه اسکن" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="NIP-hK-MBt">
+                                <rect key="frame" x="92" y="81" width="206" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Bold" family="IRANSansMobileFaNum" pointSize="16"/>
+                                <color key="textColor" name="Grey 4"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jHD-sj-c7n"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NIP-hK-MBt" firstAttribute="leading" secondItem="TWc-os-7Oj" secondAttribute="trailing" constant="20" id="FuS-zY-o0k"/>
+                            <constraint firstItem="TWc-os-7Oj" firstAttribute="width" secondItem="TWc-os-7Oj" secondAttribute="height" multiplier="1:1" id="NZY-5x-CmN"/>
+                            <constraint firstAttribute="bottom" secondItem="W9B-jj-NBN" secondAttribute="bottom" id="P9i-Gu-lzY"/>
+                            <constraint firstItem="NIP-hK-MBt" firstAttribute="centerX" secondItem="YCx-4V-JvC" secondAttribute="centerX" id="de3-rd-5WS"/>
+                            <constraint firstItem="TWc-os-7Oj" firstAttribute="top" secondItem="jHD-sj-c7n" secondAttribute="top" constant="20" id="fib-Rw-LvA"/>
+                            <constraint firstItem="TWc-os-7Oj" firstAttribute="leading" secondItem="jHD-sj-c7n" secondAttribute="leading" constant="24" id="fxN-Le-cs9"/>
+                            <constraint firstItem="NIP-hK-MBt" firstAttribute="centerY" secondItem="TWc-os-7Oj" secondAttribute="centerY" id="i3G-ih-7Jb"/>
+                            <constraint firstItem="W9B-jj-NBN" firstAttribute="top" secondItem="TWc-os-7Oj" secondAttribute="bottom" constant="20" id="iFI-pD-vmD"/>
+                            <constraint firstItem="W9B-jj-NBN" firstAttribute="leading" secondItem="YCx-4V-JvC" secondAttribute="leading" id="qng-cY-J2L"/>
+                            <constraint firstAttribute="trailing" secondItem="W9B-jj-NBN" secondAttribute="trailing" id="zhD-LE-S4b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l6L-5b-bQS"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="W9B-jj-NBN" id="N9Y-oL-RGj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iAH-rC-9tC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1658" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="4170829" width="1634" height="1453"/>
+        <image name="512x512" width="512" height="512"/>
+        <image name="Back" width="256" height="256"/>
+        <image name="Group 1" width="128" height="128"/>
+        <image name="Group 2" width="128" height="128"/>
+        <image name="Incorrect" width="640" height="637"/>
+        <namedColor name="Green 2">
+            <color red="0.55299997329711914" green="0.77600002288818359" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grey 2">
+            <color red="0.31000000238418579" green="0.31000000238418579" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grey 4">
+            <color red="0.74099999666213989" green="0.74099999666213989" blue="0.74099999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

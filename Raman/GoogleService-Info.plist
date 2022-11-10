@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>959772550851-vdeofof5qui5b12fkor6d4gij0lp44dh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.959772550851-vdeofof5qui5b12fkor6d4gij0lp44dh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBgaOnH6anTeZtgACqGL6LyRIZinSqerdc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>959772550851</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.NFC.Raman</string>
+	<key>PROJECT_ID</key>
+	<string>raman-admin-705fd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>raman-admin-705fd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:959772550851:ios:16ca948dec94b61b1ae476</string>
+	<key>DATABASE_URL</key>
+	<string>https://raman-admin-705fd-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-VariableFont_wght.ttf">
+            <string>MontserratRoman-Bold</string>
+            <string>MontserratRoman-Medium</string>
+            <string>MontserratRoman-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="LeY-qx-2eC">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JcY-PC-hf5" customClass="LoginViewController" customModule="Raman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sUz-dG-c6P">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Raman-eng" translatesAutoresizingMaskIntoConstraints="NO" id="h95-Eu-kmC">
+                                <rect key="frame" x="156.66666666666666" y="139" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Efj-G1-pgz"/>
+                                    <constraint firstAttribute="width" secondItem="h95-Eu-kmC" secondAttribute="height" multiplier="1:1" id="UWi-ch-wZp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzo-hZ-DW9">
+                                <rect key="frame" x="173" y="233" width="47.333333333333343" height="19.666666666666657"/>
+                                <fontDescription key="fontDescription" name="MontserratRoman-Bold" family="Montserrat" pointSize="16"/>
+                                <color key="textColor" name="Green 1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wwq-1c-j1W">
+                                <rect key="frame" x="24" y="332.66666666666669" width="345" height="48"/>
+                                <color key="backgroundColor" name="Grey 2"/>
+                                <color key="tintColor" name="Grey 4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="OVX-zJ-vAN"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="MontserratRoman-Medium" family="Montserrat" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" name="Grey 4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="JcY-PC-hf5" id="hkQ-E2-Oju"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="psL-Fk-gjP">
+                                <rect key="frame" x="24" y="394.66666666666669" width="345" height="48"/>
+                                <color key="backgroundColor" name="Grey 2"/>
+                                <color key="tintColor" name="Grey 4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="KUt-Ks-454"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="MontserratRoman-Medium" family="Montserrat" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" name="Grey 4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="JcY-PC-hf5" id="YEJ-ry-DJr"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pf-rn-bfz">
+                                <rect key="frame" x="24" y="748" width="345" height="50"/>
+                                <color key="backgroundColor" name="Green 2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pFu-Qh-jMu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MontserratRoman-SemiBold" family="Montserrat" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButton:" destination="JcY-PC-hf5" eventType="touchUpInside" id="RGN-PQ-NsX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AcL-8Q-eVz"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wwq-1c-j1W" firstAttribute="top" secondItem="tzo-hZ-DW9" secondAttribute="bottom" constant="80" id="3bD-zg-CG5"/>
+                            <constraint firstItem="h95-Eu-kmC" firstAttribute="centerX" secondItem="sUz-dG-c6P" secondAttribute="centerX" id="6sF-te-Zcp"/>
+                            <constraint firstItem="tzo-hZ-DW9" firstAttribute="top" secondItem="h95-Eu-kmC" secondAttribute="bottom" constant="14" id="7jR-Uh-z4g"/>
+                            <constraint firstItem="AcL-8Q-eVz" firstAttribute="trailing" secondItem="wwq-1c-j1W" secondAttribute="trailing" constant="24" id="ALV-ye-gMr"/>
+                            <constraint firstItem="AcL-8Q-eVz" firstAttribute="trailing" secondItem="psL-Fk-gjP" secondAttribute="trailing" constant="24" id="IKW-rl-wjz"/>
+                            <constraint firstItem="h95-Eu-kmC" firstAttribute="top" secondItem="AcL-8Q-eVz" secondAttribute="top" constant="80" id="Kox-jh-B0N"/>
+                            <constraint firstItem="psL-Fk-gjP" firstAttribute="top" secondItem="wwq-1c-j1W" secondAttribute="bottom" constant="14" id="OOd-Lk-2DH"/>
+                            <constraint firstItem="AcL-8Q-eVz" firstAttribute="trailing" secondItem="9pf-rn-bfz" secondAttribute="trailing" constant="24" id="OZl-oY-7B5"/>
+                            <constraint firstItem="psL-Fk-gjP" firstAttribute="leading" secondItem="AcL-8Q-eVz" secondAttribute="leading" constant="24" id="gdv-pE-Uc3"/>
+                            <constraint firstItem="9pf-rn-bfz" firstAttribute="leading" secondItem="AcL-8Q-eVz" secondAttribute="leading" constant="24" id="hx2-Rx-3sL"/>
+                            <constraint firstItem="wwq-1c-j1W" firstAttribute="leading" secondItem="AcL-8Q-eVz" secondAttribute="leading" constant="24" id="nyg-Hy-9qW"/>
+                            <constraint firstItem="AcL-8Q-eVz" firstAttribute="bottom" secondItem="9pf-rn-bfz" secondAttribute="bottom" constant="20" id="orI-Tm-Mcn"/>
+                            <constraint firstItem="tzo-hZ-DW9" firstAttribute="centerX" secondItem="sUz-dG-c6P" secondAttribute="centerX" id="sFd-Nf-zES"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fVc-TD-fUu"/>
+                    <connections>
+                        <outlet property="emailTF" destination="wwq-1c-j1W" id="gEr-fT-bou"/>
+                        <outlet property="passwordTF" destination="psL-Fk-gjP" id="okD-u8-aar"/>
+                        <segue destination="t4n-XR-fIk" kind="show" identifier="ViewController" id="GgO-MA-Xfb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UeG-ea-fNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005" y="4"/>
+        </scene>
+        <!--ViewController-->
+        <scene sceneID="PPW-X4-5Vq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ViewController" id="t4n-XR-fIk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cEf-KF-dFu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gm8-52-XUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Raman-eng" width="569" height="571"/>
+        <namedColor name="Green 1">
+            <color red="0.030999999493360519" green="0.48199999332427979" blue="0.21600000560283661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Green 2">
+            <color red="0.55299997329711914" green="0.77600002288818359" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grey 2">
+            <color red="0.31000000238418579" green="0.31000000238418579" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grey 4">
+            <color red="0.74099999666213989" green="0.74099999666213989" blue="0.74099999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
